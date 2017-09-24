@@ -1,0 +1,13 @@
+spring:
+  http:
+    multipart:
+      max-file-size: 1000MB
+  data:
+    mongodb:
+      database: oss
+  profiles:
+    active: log
+server:
+  session:
+    timeout: -1
+  port: 80
