@@ -17,6 +17,7 @@ public class RegisterService {
     public boolean register(User user){
         user.setAdmin(false);
         user.setState(false);
+        user.setProfile("static/defaultMeImg.png");
         userRepository.insert(user);
         return true;
     }

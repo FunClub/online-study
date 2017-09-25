@@ -33,8 +33,6 @@ public class LoginService {
         }else{
             user = userRepository.findOne(Example.of(user));
         }
-        user.setPassword(null);
-        user.setAccount(null);
         return user;
     }
 }
