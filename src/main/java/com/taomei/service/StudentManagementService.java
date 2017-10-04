@@ -2,8 +2,8 @@ package com.taomei.service;
 
 import com.taomei.dao.docment.User;
 import com.taomei.dao.repository.UserRepository;
-import com.taomei.dao.dto.base.studentmanagement.StudentQueryDto;
-import com.taomei.dao.dto.base.studentmanagement.StudentsDto;
+import com.taomei.dao.dto.studentmanagement.StudentQueryDto;
+import com.taomei.dao.dto.studentmanagement.StudentsDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;

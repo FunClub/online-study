@@ -1,4 +1,4 @@
-package com.taomei.dao.dto.base.studentmanagement;
+package com.taomei.dao.dto.studentmanagement;
 
 import com.taomei.dao.dto.base.PagedDataDto;
 
