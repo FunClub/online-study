@@ -1,7 +1,7 @@
 package com.taomei.web.controller;
 
 import com.taomei.dao.docment.User;
-import com.taomei.dao.dto.base.studentmanagement.StudentQueryDto;
+import com.taomei.dao.dto.studentmanagement.StudentQueryDto;
 import com.taomei.service.StudentManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
