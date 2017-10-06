@@ -1,9 +1,6 @@
 package com.taomei.dao.dto.settings;
 
 import com.taomei.dao.docment.Menu;
-import com.taomei.dao.docment.MenuItem;
-
-import java.util.List;
 
 public class InsertMenuDto {
     private String type;

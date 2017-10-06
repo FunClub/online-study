@@ -2,6 +2,7 @@ package com.taomei.web.controller;
 
 import com.taomei.dao.docment.Menu;
 import com.taomei.dao.dto.settings.InsertMenuDto;
+import com.taomei.dao.dto.settings.QueryMenuCondition;
 import com.taomei.service.SettingsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +22,14 @@ public class SettingsController {
         return settingsService.insertMenu(menu);
     }
 
-    @GetMapping("/menu-item")
-    public Object selectMenuItem(){
-        return settingsService.selectMenu(null);
+    @PutMapping("/menu")
+    public Object updateMenu(@RequestBody Menu menu){
+        return  this.settingsService.updateMenu(menu);
+    }
+    @GetMapping("/menu/{type}")
+    public Object selectMenuItem(@PathVariable("type") String type){
+        QueryMenuCondition condition = new QueryMenuCondition();
+        condition.setType(type);
+        return settingsService.selectMenu(condition);
     }
 }

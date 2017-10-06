@@ -1,8 +1,6 @@
 package com.taomei.dao.docment;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 
 public class MenuItem {
     @Id
@@ -12,12 +10,12 @@ public class MenuItem {
     private String icon;
     private String type;
 
-    public String getType() {
-        return type;
+    public String getId() {
+        return id;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getLabel() {
@@ -44,11 +42,11 @@ public class MenuItem {
         this.icon = icon;
     }
 
-    public String getId() {
-        return id;
+    public String getType() {
+        return type;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setType(String type) {
+        this.type = type;
     }
 }
