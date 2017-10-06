@@ -21,21 +21,16 @@ public class SettingsService {
         this.menuItemRepository = menuItemRepository;
     }
 
-    public boolean insertMenu(InsertMenuDto dto){
-        String type = dto.getType();
-        if(type.equals("menu")){
-            menuRepository.insert(dto.getMenu());
-        }else{
-            menuItemRepository.insert(dto.getMenuItem());
-        }
+    public boolean insertMenu(Menu menu){
+        menuRepository.insert(menu);
         return true;
     }
 
-    public List<MenuItem> selectMenuItem(List<String> ids){
+    public List<Menu> selectMenu(List<String> ids){
         if(ids!=null){
-            return menuItemRepository.findAll();
+            return menuRepository.findAll();
         }else{
-            return menuItemRepository.findAll();
+            return menuRepository.findAll();
         }
     }
 }

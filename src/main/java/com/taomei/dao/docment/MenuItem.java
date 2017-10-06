@@ -3,13 +3,22 @@ package com.taomei.dao.docment;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "menuItem")
+
 public class MenuItem {
     @Id
     private String id;
     private String label;
     private String url;
     private String icon;
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getLabel() {
         return label;

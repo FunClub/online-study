@@ -7,7 +7,6 @@ import java.util.List;
 
 public class InsertMenuDto {
     private String type;
-    private MenuItem menuItem;
     private Menu menu;
 
     public String getType() {
@@ -18,13 +17,6 @@ public class InsertMenuDto {
         this.type = type;
     }
 
-    public MenuItem getMenuItem() {
-        return menuItem;
-    }
-
-    public void setMenuItem(MenuItem menuItem) {
-        this.menuItem = menuItem;
-    }
 
     public Menu getMenu() {
         return menu;

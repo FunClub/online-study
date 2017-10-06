@@ -1,5 +1,6 @@
 package com.taomei.web.controller;
 
+import com.taomei.dao.docment.Menu;
 import com.taomei.dao.dto.settings.InsertMenuDto;
 import com.taomei.service.SettingsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +17,12 @@ public class SettingsController {
     }
 
     @PostMapping("/menu")
-    public Object insertMenu(@RequestBody InsertMenuDto dto){
-        return settingsService.insertMenu(dto);
+    public Object insertMenu(@RequestBody Menu menu){
+        return settingsService.insertMenu(menu);
     }
 
     @GetMapping("/menu-item")
     public Object selectMenuItem(){
-        return settingsService.selectMenuItem(null);
+        return settingsService.selectMenu(null);
     }
 }

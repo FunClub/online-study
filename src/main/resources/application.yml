@@ -11,3 +11,6 @@ server:
   session:
     timeout: -1
   port: 80
+endpoints:
+  actuator:
+    enabled: true
