@@ -1,7 +1,7 @@
 package com.taomei.service;
 
 import com.taomei.dao.docment.Menu;
-import com.taomei.dao.dto.settings.QueryMenuCondition;
+import com.taomei.dao.dto.settings.QueryMenuDto;
 import com.taomei.dao.dto.settings.ShowMenuDto;
 import com.taomei.dao.repository.MenuRepository;
 import org.springframework.beans.BeanUtils;
@@ -29,7 +29,7 @@ public class SettingsService {
         return true;
     }
 
-    public List<ShowMenuDto> selectMenu(QueryMenuCondition condition) {
+    public List<ShowMenuDto> selectMenu(QueryMenuDto condition) {
         String type = condition.getType();
         List<ShowMenuDto> showMenuDtos = new ArrayList<>();
         List<Menu> menus = null;

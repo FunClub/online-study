@@ -2,7 +2,7 @@ package com.taomei.dao.dto.settings;
 
 import java.util.List;
 
-public class QueryMenuCondition {
+public class QueryMenuDto {
     private String type;
     private List<String> menuIds;
 

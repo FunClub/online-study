@@ -14,3 +14,5 @@ server:
 endpoints:
   actuator:
     enabled: true
+  cors:
+    allowed-origins: www.baidu.com
