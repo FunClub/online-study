@@ -1,21 +1,15 @@
 package com.taomei.service;
 
 import com.taomei.dao.docment.User;
-import com.taomei.dao.repository.UserRepository;
 import com.taomei.dao.dto.studentmanagement.StudentQueryDto;
 import com.taomei.dao.dto.studentmanagement.StudentsDto;
+import com.taomei.dao.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-
-import static org.springframework.data.mongodb.core.query.Criteria.where;
 
 @Service
 public class StudentManagementService {
