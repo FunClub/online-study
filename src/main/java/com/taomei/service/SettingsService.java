@@ -6,6 +6,9 @@ import com.taomei.dao.dto.settings.ShowMenuDto;
 import com.taomei.dao.repository.MenuRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -14,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@CacheConfig(cacheNames="app-cache")
 public class SettingsService {
     private final MenuRepository menuRepository;
 
@@ -25,11 +29,12 @@ public class SettingsService {
         menuRepository.save(menu);
         return true;
     }
+    @CacheEvict(key = "'menu'")
     public boolean insertMenu(Menu menu) {
         menuRepository.insert(menu);
         return true;
     }
-
+    @Cacheable(key = "'menu'")
     public List<ShowMenuDto> selectMenu(QueryMenuDto condition) {
         String type = condition.getType();
         List<ShowMenuDto> showMenuDtos = new ArrayList<>();

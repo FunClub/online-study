@@ -5,6 +5,9 @@ spring:
   data:
     mongodb:
       database: oss
+  cache:
+      ehcache:
+        config: ehcache.xml
   profiles:
     active: log
 server:
@@ -14,5 +17,3 @@ server:
 endpoints:
   actuator:
     enabled: true
-  cors:
-    allowed-origins: www.baidu.com
