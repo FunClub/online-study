@@ -7,6 +7,7 @@ import com.taomei.dao.repository.MenuRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -35,11 +36,11 @@ public class SettingsService {
         List<Menu> menus = null;
         if (type != null) {
             if(type.equals("all")){//查询全部/
-                menus = menuRepository.findAll();
+                menus = menuRepository.findAll(new Sort(Sort.Direction.DESC,"id"));
             }else{//根据类型查询
                 Menu menu = new Menu();
                 menu.setType(type);
-                menus = menuRepository.findAll(Example.of(menu));
+                menus = menuRepository.findAll(Example.of(menu),new Sort(Sort.Direction.DESC,"id"));
             }
         } else {
 
